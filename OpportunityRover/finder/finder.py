@@ -67,4 +67,5 @@ def run_main():
     df = pd.DataFrame(opportunities)
     print(df)
     df.to_csv("./results.csv")
+    driver.quit()
      
