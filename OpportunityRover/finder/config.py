@@ -1,116 +1,116 @@
 
 targets = {
 
-    # "Artist Communities" : {
+    "Artist Communities" : {
 
-    #     "site_type":"static",
+        "site_type":"static",
 
-    #     "model": "lookinside",
+        "model": "lookinside",
 
-    #     "limit": -1,
+        "limit": -1,
 
-    #     "site": "https://artistcommunities.org/directory/open-calls?opencall_name=&residency=&org=&field_residency_address_locality=&discipline%5B%5D=429&discipline%5B%5D=378&discipline%5B%5D=422&no_deadline=0&sort_bef_combine=field_deadline_value_ASC",
+        "site": "https://artistcommunities.org/directory/open-calls?opencall_name=&residency=&org=&field_residency_address_locality=&discipline%5B%5D=429&discipline%5B%5D=378&discipline%5B%5D=422&no_deadline=0&sort_bef_combine=field_deadline_value_ASC",
 
-    #     "lookinside_base":"https://artistcommunities.org",
+        "lookinside_base":"https://artistcommunities.org",
 
-    #     "headers": {
-    #         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/112.0',
-    #         'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
-    #         'Accept-Language': 'en-US,en;q=0.5',
-    #         'Connection': 'keep-alive',
-    #         'Upgrade-Insecure-Requests': '1',
-    #         'Sec-Fetch-Dest': 'document',
-    #         'Sec-Fetch-Mode': 'navigate',
-    #         'Sec-Fetch-Site': 'none',
-    #         'Sec-Fetch-User': '?1'
-    #     },
+        "headers": {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/112.0',
+            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
+            'Accept-Language': 'en-US,en;q=0.5',
+            'Connection': 'keep-alive',
+            'Upgrade-Insecure-Requests': '1',
+            'Sec-Fetch-Dest': 'document',
+            'Sec-Fetch-Mode': 'navigate',
+            'Sec-Fetch-Site': 'none',
+            'Sec-Fetch-User': '?1'
+        },
 
-    #     "list_container_search": {"type":"tbody"},
+        "list_container_search": {"type":"tbody"},
 
-    #     "list_item_search": {"type": "tr"},
+        "list_item_search": {"type": "tr"},
 
-    #     "anchor_search": {},
+        "anchor_search": {},
 
-    #     "name_search": {"type":"h1", "class":"page-title"},
+        "name_search": {"type":"h1", "class":"page-title"},
 
-    #     "summary_search": {"type":"div", "class":"clearfix text-formatted field field--name-field-oc-residency-description field--type-text-with-summary field--label-hidden field__item"},
+        "summary_search": {"type":"div", "class":"clearfix text-formatted field field--name-field-oc-residency-description field--type-text-with-summary field--label-hidden field__item"},
 
-    #     "keyword_search": {"type":"div", "id": "block-aca-content", "class":"block block-system block-system-main-block"}
-    # },
+        "keyword_search": {"type":"div", "id": "block-aca-content", "class":"block block-system block-system-main-block"}
+    },
 
-    # "Mid America Print Council" : {
+    "Mid America Print Council" : {
 
-    #     "site_type":"static",
+        "site_type":"static",
 
-    #     "model": "lookinside",
+        "model": "lookinside",
 
-    #     "limit": -1,
+        "limit": -1,
 
-    #     "site": "https://midamericaprintcouncil.org/category/opportunities/",
+        "site": "https://midamericaprintcouncil.org/category/opportunities/",
 
-    #     "lookinside_base":"",
+        "lookinside_base":"",
 
-    #     "headers": {
-    #         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/112.0',
-    #         'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
-    #         'Accept-Language': 'en-US,en;q=0.5',
-    #         'Connection': 'keep-alive',
-    #         'Upgrade-Insecure-Requests': '1',
-    #         'Sec-Fetch-Dest': 'document',
-    #         'Sec-Fetch-Mode': 'navigate',
-    #         'Sec-Fetch-Site': 'none',
-    #         'Sec-Fetch-User': '?1'
-    #     },
+        "headers": {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/112.0',
+            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
+            'Accept-Language': 'en-US,en;q=0.5',
+            'Connection': 'keep-alive',
+            'Upgrade-Insecure-Requests': '1',
+            'Sec-Fetch-Dest': 'document',
+            'Sec-Fetch-Mode': 'navigate',
+            'Sec-Fetch-Site': 'none',
+            'Sec-Fetch-User': '?1'
+        },
 
-    #     "list_container_search": {"type":"div", "class":None, "id":"isotope-list"},
+        "list_container_search": {"type":"div", "class":None, "id":"isotope-list"},
 
-    #     "list_item_search": {"type": "div"},
+        "list_item_search": {"type": "div"},
 
-    #     "anchor_search": {"type":"h2", "class":"entry-title default-max-width"},
+        "anchor_search": {"type":"h2", "class":"entry-title default-max-width"},
 
-    #     "name_search": {"type":"h1", "class":"entry-title"},
+        "name_search": {"type":"h1", "class":"entry-title"},
 
-    #     "summary_search": {"type":"div", "class":"entry-content"},
+        "summary_search": {"type":"div", "class":"entry-content"},
 
-    #     "keyword_search": {"type":"div", "class":"entry-content"},
-    # },
+        "keyword_search": {"type":"div", "class":"entry-content"},
+    },
 
-    # "artwork archive - print" : {
+    "artwork archive - print" : {
 
-    #     "site_type":"static",
+        "site_type":"static",
 
-    #     "model": "lookinside",
+        "model": "lookinside",
 
-    #     "limit": -1,
+        "limit": -1,
 
-    #     "site": "https://www.artworkarchive.com/call-for-entry?call_search=print",
+        "site": "https://www.artworkarchive.com/call-for-entry?call_search=print",
 
-    #     "lookinside_base":"https://www.artworkarchive.com",
+        "lookinside_base":"https://www.artworkarchive.com",
 
-    #     "headers": {
-    #         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/112.0',
-    #         'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
-    #         'Accept-Language': 'en-US,en;q=0.5',
-    #         'Connection': 'keep-alive',
-    #         'Upgrade-Insecure-Requests': '1',
-    #         'Sec-Fetch-Dest': 'document',
-    #         'Sec-Fetch-Mode': 'navigate',
-    #         'Sec-Fetch-Site': 'none',
-    #         'Sec-Fetch-User': '?1'
-    #     },
+        "headers": {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/112.0',
+            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
+            'Accept-Language': 'en-US,en;q=0.5',
+            'Connection': 'keep-alive',
+            'Upgrade-Insecure-Requests': '1',
+            'Sec-Fetch-Dest': 'document',
+            'Sec-Fetch-Mode': 'navigate',
+            'Sec-Fetch-Site': 'none',
+            'Sec-Fetch-User': '?1'
+        },
 
-    #     "list_container_search": {"type":"div", "class":"medium-9 columns"},
+        "list_container_search": {"type":"div", "class":"medium-9 columns"},
 
-    #     "list_item_search": {"type": "div", "class":"medium-12 columns", "recursive": True},
+        "list_item_search": {"type": "div", "class":"medium-12 columns", "recursive": True},
 
-    #     "anchor_search": {},
+        "anchor_search": {},
 
-    #     "name_search": {"type":"h2"},
+        "name_search": {"type":"h2"},
 
-    #     "summary_search": {"type":"section", "class":"external_link_security"},
+        "summary_search": {"type":"section", "class":"external_link_security"},
 
-    #     "keyword_search": {"type":"section", "class":"external_link_security"},
-    # },
+        "keyword_search": {"type":"section", "class":"external_link_security"},
+    },
 
     "New York Foundation for the Arts" : {
 
