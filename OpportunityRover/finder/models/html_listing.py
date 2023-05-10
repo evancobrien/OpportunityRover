@@ -1,27 +1,27 @@
 import OpportunityRover.finder.config as config
 
-from OpportunityRover.finder.web.web import grab_content
+from OpportunityRover.finder.web.web import get_content
 from OpportunityRover.finder.util import find_relevent_subjects, soup_find, soup_children
 from OpportunityRover.finder.exceptions import InvalidSiteType
 from OpportunityRover.finder.results import Opportunity
 from bs4 import BeautifulSoup
 
 
-def html_simple(
-                      source:str,
-                      site_type:str,
-                      source_url:str,
-                      headers: dict,
-                      list_container_search: dict,
-                      list_item_search: dict,
-                      link_search: dict,
-                      driver=None
-                      ):
+def html_listing(
+                source:str,
+                site_type:str,
+                source_url:str,
+                headers: dict,
+                list_container_search: dict,
+                list_item_search: dict,
+                link_search: dict,
+                driver=None
+                ):
 
     if site_type == 'static':
-        content = grab_content(url=source_url, headers=headers)
+        content = get_content(url=source_url, headers=headers)
     elif site_type == 'dynamic':
-        content = grab_content(url=source_url, driver=driver)
+        content = get_content(url=source_url, driver=driver)
     else: raise InvalidSiteType()
 
     # Create Soup
