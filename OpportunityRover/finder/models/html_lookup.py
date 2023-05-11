@@ -14,7 +14,6 @@ def html_lookup(
                       limit: int,
                       source_url:str,
                       lookinside_base: str,
-                      headers: dict,
                       list_container_search: dict,
                       list_item_search: dict,
                       anchor_search: dict,
@@ -25,7 +24,7 @@ def html_lookup(
                       ):
     
     if site_type == 'static':
-        content = get_content(url=source_url, headers=headers)
+        content = get_content(url=source_url)
     elif site_type == 'dynamic':
         content = get_content(url=source_url, driver=driver)
     else: raise InvalidSiteType()
@@ -56,7 +55,7 @@ def html_lookup(
         target = lookinside_base + anchor
 
         if site_type == 'static':
-            item_content = get_content(target, headers=headers)
+            item_content = get_content(target)
         elif site_type == 'dynamic':
             item_content = get_content(target, driver=driver)
 

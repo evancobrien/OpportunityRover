@@ -11,7 +11,6 @@ def html_listing(
                 source:str,
                 site_type:str,
                 source_url:str,
-                headers: dict,
                 list_container_search: dict,
                 list_item_search: dict,
                 link_search: dict,
@@ -19,7 +18,7 @@ def html_listing(
                 ):
 
     if site_type == 'static':
-        content = get_content(url=source_url, headers=headers)
+        content = get_content(url=source_url)
     elif site_type == 'dynamic':
         content = get_content(url=source_url, driver=driver)
     else: raise InvalidSiteType()

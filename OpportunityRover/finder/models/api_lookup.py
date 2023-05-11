@@ -5,19 +5,19 @@ from OpportunityRover.finder.util import find_relevent_subjects
 from OpportunityRover.finder.config import subjects
 from OpportunityRover.finder.results import Opportunity
 
+
 def api_lookup(
                       source:str,
                       site_type:str,
                       source_url:str,
                       lookinside_base: str,
-                      headers: dict,
                       list_container: str,
                       link_search: dict,
                       link_constructor: str,
                       searches: dict
                       ):
 
-    response = json.loads(get_content(source_url, headers=headers))
+    response = json.loads(get_content(source_url))
     listings = response[list_container]
 
     targets = [listing[link_search] for listing in listings]
@@ -25,7 +25,7 @@ def api_lookup(
     ops = []
     for target in targets:
         target_url = lookinside_base.replace('REPLACE_ME', target)
-        item = json.loads(get_content(target_url, headers=headers))
+        item = json.loads(get_content(target_url))
 
         keyword_body = ''
         for term in searches['keyword']:

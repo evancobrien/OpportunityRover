@@ -13,18 +13,6 @@ targets = {
 
         "lookinside_base":"https://artistcommunities.org",
 
-        "headers": {
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/112.0',
-            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
-            'Accept-Language': 'en-US,en;q=0.5',
-            'Connection': 'keep-alive',
-            'Upgrade-Insecure-Requests': '1',
-            'Sec-Fetch-Dest': 'document',
-            'Sec-Fetch-Mode': 'navigate',
-            'Sec-Fetch-Site': 'none',
-            'Sec-Fetch-User': '?1'
-        },
-
         "list_container_search": {"type":"tbody"},
 
         "list_item_search": {"type": "tr"},
@@ -49,18 +37,6 @@ targets = {
         "site": "https://midamericaprintcouncil.org/category/opportunities/",
 
         "lookinside_base":"",
-
-        "headers": {
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/112.0',
-            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
-            'Accept-Language': 'en-US,en;q=0.5',
-            'Connection': 'keep-alive',
-            'Upgrade-Insecure-Requests': '1',
-            'Sec-Fetch-Dest': 'document',
-            'Sec-Fetch-Mode': 'navigate',
-            'Sec-Fetch-Site': 'none',
-            'Sec-Fetch-User': '?1'
-        },
 
         "list_container_search": {"type":"div", "class":None, "id":"isotope-list"},
 
@@ -87,18 +63,6 @@ targets = {
 
         "lookinside_base":"https://www.artworkarchive.com",
 
-        "headers": {
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/112.0',
-            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
-            'Accept-Language': 'en-US,en;q=0.5',
-            'Connection': 'keep-alive',
-            'Upgrade-Insecure-Requests': '1',
-            'Sec-Fetch-Dest': 'document',
-            'Sec-Fetch-Mode': 'navigate',
-            'Sec-Fetch-Site': 'none',
-            'Sec-Fetch-User': '?1'
-        },
-
         "list_container_search": {"type":"div", "class":"medium-9 columns"},
 
         "list_item_search": {"type": "div", "class":"medium-12 columns", "recursive": True},
@@ -124,31 +88,25 @@ targets = {
 
         "lookinside_base":"https://api.nyfa.org/api/client/listing/REPLACE_ME/opportunity",
 
-        "headers": {
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/112.0',
-            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
-            'Accept-Language': 'en-US,en;q=0.5',
-            'Connection': 'keep-alive',
-            'Upgrade-Insecure-Requests': '1',
-            'Sec-Fetch-Dest': 'document',
-            'Sec-Fetch-Mode': 'navigate',
-            'Sec-Fetch-Site': 'none',
-            'Sec-Fetch-User': '?1'
-        },
-
         "list_container": "listings",
 
         "link_search": "listingId",
 
-        "name_search": "title",
+        "link_constructor": "https://www.nyfa.org/view-opportunity/?id=REPLACE_ME",
 
-        "summary_search": "description",
+        "searches": {
 
-        "keyword_search": ["description", "opporunityDisciplines"],
+            "name": "title",
 
-        "application_fee": "applicationFee",
+            "summary": "description",
 
-        "deadline":"applicationDeadline"
+            "keyword": ["description", "opportunityDisciplines"],
+
+            "application_fee": "applicationFee",
+
+            "deadline": "applicationDeadline"
+        }
+
     },
 }
 
@@ -160,3 +118,16 @@ subjects = {
     "women": ["woman", "women"]
 }
 
+connection_defaults = {
+    "headers": {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/112.0',
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
+        'Accept-Language': 'en-US,en;q=0.5',
+        'Connection': 'keep-alive',
+        'Upgrade-Insecure-Requests': '1',
+        'Sec-Fetch-Dest': 'document',
+        'Sec-Fetch-Mode': 'navigate',
+        'Sec-Fetch-Site': 'none',
+        'Sec-Fetch-User': '?1'
+    },
+}

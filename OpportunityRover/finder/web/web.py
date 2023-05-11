@@ -2,22 +2,25 @@ import requests
 import time
 from selenium.webdriver.firefox.webdriver import WebDriver
 
+from OpportunityRover.finder.config import connection_defaults
+
 def get_content(
         url: str,
         headers=None,
-        driver=None):
+        driver=None,
+        dynamic=False):
     
-    if not headers and not driver: 
-        raise ValueError("either headers or driver parameter must be provided.")
-    
-    elif headers and driver: 
-        raise ValueError("headers and driver parameters are mutually exclusive. provide one.")
+    if dynamic and not driver:
+        raise ValueError("Missing driver for dynamic content request.")
+
+    elif dynamic:
+        grab_html_dynamic(url, driver=driver)
     
     elif headers: 
         return grab_html_requests(url, headers)
     
-    elif driver:
-        return grab_html_dynamic(url, driver)
+    else:
+        return grab_html_requests(url, headers=connection_defaults['headers'])
 
 
 def grab_html_requests(url: str, headers: dict) -> str:
