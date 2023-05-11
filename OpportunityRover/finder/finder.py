@@ -3,7 +3,7 @@ import OpportunityRover.finder.config as config
 import pandas as pd
 
 from OpportunityRover.finder.web.driver import get_driver
-from OpportunityRover.finder.models.html_simple import html_simple
+from OpportunityRover.finder.models.html_listing import html_listing
 from OpportunityRover.finder.models.html_lookup import html_lookup
 from OpportunityRover.finder.models.api_lookup import api_lookup
 
@@ -19,7 +19,7 @@ def run_main():
         model = value['model']
         if model == 'simplelist':
 
-            ops = html_simple(    
+            ops = html_listing(    
                                         source                  =key,
                                         site_type               =value['site_type'],
                                         source_url              =value['site'],
@@ -55,9 +55,8 @@ def run_main():
                                         headers                 =value['headers'],
                                         list_container          =value['list_container'],
                                         link_search             =value['link_search'],                                        
-                                        name_search             =value['name_search'],
-                                        summary_search          =value['summary_search'],
-                                        keyword_search          =value['keyword_search'],)
+                                        link_constructor        =value['link_constructor'],
+                                        searches                =value['searches'])
 
         opportunities.extend(ops)
         print(f"Scraped {key}, {len(ops)} opportunities found.")

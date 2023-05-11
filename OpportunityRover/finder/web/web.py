@@ -2,7 +2,7 @@ import requests
 import time
 from selenium.webdriver.firefox.webdriver import WebDriver
 
-def grab_content(
+def get_content(
         url: str,
         headers=None,
         driver=None):
@@ -26,5 +26,5 @@ def grab_html_requests(url: str, headers: dict) -> str:
 def grab_html_dynamic(url:str, driver: WebDriver) -> str:
     driver.get(url=url)
     driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-    time.sleep(0.5)
+    time.sleep(0.2)
     return driver.page_source

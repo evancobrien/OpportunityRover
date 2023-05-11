@@ -1,7 +1,7 @@
 import OpportunityRover.finder.config as config
 import time
 from random import uniform
-from OpportunityRover.finder.web.web import grab_content
+from OpportunityRover.finder.web.web import get_content
 from OpportunityRover.finder.util import find_relevent_subjects, soup_find, soup_children
 from OpportunityRover.finder.results import Opportunity
 from OpportunityRover.finder.exceptions import InvalidSiteType
@@ -25,9 +25,9 @@ def html_lookup(
                       ):
     
     if site_type == 'static':
-        content = grab_content(url=source_url, headers=headers)
+        content = get_content(url=source_url, headers=headers)
     elif site_type == 'dynamic':
-        content = grab_content(url=source_url, driver=driver)
+        content = get_content(url=source_url, driver=driver)
     else: raise InvalidSiteType()
 
 
@@ -56,12 +56,11 @@ def html_lookup(
         target = lookinside_base + anchor
 
         if site_type == 'static':
-            item_content = grab_content(target, headers=headers)
+            item_content = get_content(target, headers=headers)
         elif site_type == 'dynamic':
-            item_content = grab_content(target, driver=driver)
+            item_content = get_content(target, driver=driver)
 
         item_soup = BeautifulSoup(item_content, "html.parser")
-        print(item_soup)
         name = soup_find(item_soup, name_search).get_text(" ")
         summary = soup_find(item_soup,summary_search).get_text("\n")
         keyword_search_text = soup_find(item_soup, keyword_search).get_text("\n")
